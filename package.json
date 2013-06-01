@@ -1,0 +1,25 @@
+{
+  "name": "dictatorship",
+  "description": "Prevents EADDRINUSE by killing processes listning on your favorite port",
+  "homepage": "https://github.com/bevacqua/dictatorship",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "nicolasbevacqua@gmail.com",
+    "url": "http://www.ponyfoo.com"
+  },
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bevacqua/dictatorship.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bevacqua/dictatorship/issues"
+  },
+  "dependencies": {
+  },
+  "main": "./src/dictatorship.js",
+  "engines": {
+    "node": "0.10.6",
+    "npm": "1.2.x"
+  }
+}
