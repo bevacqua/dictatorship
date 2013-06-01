@@ -1,6 +1,6 @@
 {
   "name": "dictatorship",
-  "description": "Prevents EADDRINUSE by killing processes listning on your favorite port",
+  "description": "Prevents EADDRINUSE by killing processes listening on your favorite port",
   "homepage": "https://github.com/bevacqua/dictatorship",
   "author": {
     "name": "Nicolas Bevacqua",
