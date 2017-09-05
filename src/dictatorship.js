@@ -12,7 +12,12 @@ function execute(command, rpid, done){
             return done(); // err: no pids
         }
 
-        data.match(rpid).map(returnInt).forEach(function(pid){
+        data.match(rpid).map(returnInt)
+        // Set the PID list unique (thanks to https://stackoverflow.com/a/31158960/1954789)
+        .sort().filter(function(value, index, array) {
+            return (index === 0) || (value !== array[index-1]);
+        })
+        .forEach(function(pid){
             process.stdout.write('overthrowing pid ' + pid + '...');
             process.kill(pid);
             console.log('done');
@@ -30,7 +35,7 @@ module.exports = {
             command = 'lsof -i tcp:' + port + ' | grep node | grep -i listen';
             rpid = / \d+ /gm;
         }else{
-            command = 'netstat -n -a -o | grep -i listening | grep :' + port;
+            command = 'netstat -n -a -o | findstr -i listening | findstr :' + port;
             rpid = /\d+$/gm;
         }
 

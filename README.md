@@ -21,3 +21,12 @@ Look for processes currently listening in the provided port, `process.kill` all 
 ```
 
 **Not recommended for production environments.** The purpose of this module is to overthrow renegade node processes spawned by [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch "grunt-contrib-watch on GitHub") and their ilk.
+
+## Test it ##
+To see it in actions, try in two different windows:
+
+```js
+npm start
+```
+
+None of them will hae a "EADDRINUSE", but only one will survive.

@@ -15,11 +15,15 @@
   "bugs": {
     "url": "https://github.com/bevacqua/dictatorship/issues"
   },
-  "dependencies": {
+  "devDependencies": {
+    "express": "^4.15.4"
   },
   "main": "./src/dictatorship.js",
   "engines": {
     "node": "0.10.6",
     "npm": "1.2.x"
+  },
+  "scripts": {
+    "start": "node bin/server.js"
   }
 }
