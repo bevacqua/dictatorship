@@ -16,7 +16,6 @@
     "url": "https://github.com/bevacqua/dictatorship/issues"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
     "express": "^4.15.4"
   },
   "main": "./src/dictatorship.js",
@@ -25,7 +24,6 @@
     "npm": "1.2.x"
   },
   "scripts": {
-    "start": "node bin/server.js",
-    "test": "concurrent \"npm start\" \"npm start\""
+    "start": "node bin/server.js"
   }
 }
