@@ -30,7 +30,7 @@ module.exports = {
             command = 'lsof -i tcp:' + port + ' | grep node | grep -i listen';
             rpid = / \d+ /gm;
         }else{
-            command = 'netstat -n -a -o | grep -i listening | grep :' + port;
+            command = 'netstat -n -a -o | findstr -i listening | findstr :' + port;
             rpid = /\d+$/gm;
         }
 
